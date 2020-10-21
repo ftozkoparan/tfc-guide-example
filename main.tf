@@ -1,11 +1,3 @@
-terraform {
-  required_version = ">= 0.12.20"
-}
-
-provider "google-beta" {
-
-}
-
 module "test_data" {
   source     = "./source"
   dataset_id = "test_dataset"
