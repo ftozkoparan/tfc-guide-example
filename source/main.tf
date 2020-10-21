@@ -2,9 +2,9 @@ terraform {
   required_version = ">= 0.12.1"
 }
 
-provider "google-beta" {
+provider "google" {
 
-  credentials = file(var.credentials_file)
+  credentials = "test-project.json"
 
   project = var.project_id
   region  = "us-central1"
@@ -42,16 +42,6 @@ resource "google_bigquery_table" "default" {
     content {
     type  = "DAY"
     field = partition_field.value != "LOAD_TIME" ? partition_field.value : ""
-    }
-  }
-
-
-  range_partitioning {
-        field = lookup(var.tables[count.index], "range_partition_field")
-        range {
-        end = 100
-        interval = 1
-        start = 1
     }
   }
 

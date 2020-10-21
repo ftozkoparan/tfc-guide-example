@@ -1,7 +1,3 @@
-variable "credentials_file" {
-  default = "../credentials.json"
-}
-
 variable "dataset_id" {
   default = "range_partition_test_dataset"
 }
