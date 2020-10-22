@@ -31,5 +31,16 @@ test_tables = [
     "range_partition_start"    = 1,
     "range_partition_end"      = 10000,
     "clustering"               = []
+  },
+  {
+    "table_id"                 = "bikeshare_stations_backup",
+    "schema"                   = "bikeshare_stations.json",
+    "description"              = "range partitioned test data",
+    "partition_field"          = "",
+    "range_partition_field"    = "station_id",
+    "range_partition_interval" = 1,
+    "range_partition_start"    = 1,
+    "range_partition_end"      = 10000,
+    "clustering"               = []
   }
 ]
