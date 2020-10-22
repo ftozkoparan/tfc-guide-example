@@ -1,14 +1,14 @@
 test_dataset_tables = [
   {
-    "table_id"              = "test",
-    "schema"                = "test.json",
-    "description"           = "test"
-    "partition_field"       = "",
-    "range_partition_field" = "",
+    "table_id"                 = "test",
+    "schema"                   = "test.json",
+    "description"              = "test"
+    "partition_field"          = "",
+    "range_partition_field"    = "",
     "range_partition_interval" = "",
     "range_partition_start"    = "",
     "range_partition_end"      = ""
-    "clustering"            = []
+    "clustering"               = []
   },
   {
     "table_id"                 = "bikeshare_stations",
