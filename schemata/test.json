@@ -8,5 +8,10 @@
     "mode": "NULLABLE",
     "name": "birth_date",
     "type": "DATE"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "last_updated_at",
+    "type": "TIMESTAMP"
   }
 ]

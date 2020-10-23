@@ -28,5 +28,10 @@
     "mode": "NULLABLE",
     "name": "location",
     "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "last_updated_at",
+    "type": "TIMESTAMP"
   }
 ]
