@@ -34,13 +34,9 @@ resource "google_bigquery_table" "default" {
   ),
   )
 
-  dynamic "time_partitioning" {
-    for_each = lookup(var.tables[count.index], "partition_field") != "" ? [lookup(var.tables[count.index], "partition_field")] : []
-    iterator = partition_field
-    content {
-    type  = "DAY"
-    field = partition_field.value != "LOAD_TIME" ? partition_field.value : ""
-    }
+  time_partitioning {
+        type = "DAY"
+        field = "last_updated_at"
   }
 
   clustering = lookup(var.tables[count.index], "clustering")
